@@ -38,5 +38,5 @@ python -m eval.run_eval
 ## Project Layout
 `nosh/` (engine, NLU, web, RAG) · `eval/` (evaluation) · `tests/` · `scripts/`
 
-## AI Tool Disclosure
-Built with Claude Code (Anthropic) under human direction. Update this section to describe your own involvement.
+
+Built for the GenAI Intern assignment.

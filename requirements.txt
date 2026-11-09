@@ -1,0 +1,6 @@
+# All optional: without them the app falls back (hash embeddings, no PDF/XLSX parsing, no LLM).
+numpy>=1.24
+fastembed>=0.3        # MiniLM embeddings via ONNX (preferred)
+pypdf>=4              # PDF parsing
+openpyxl>=3.1         # XLSX parsing
+# sentence-transformers  # alternative embedding backend (needs torch)

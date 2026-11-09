@@ -1,0 +1,235 @@
+{
+ "when": "2026-11-09T08:30:18.050Z",
+ "pass": 35,
+ "total": 38,
+ "results": [
+  {
+   "id": "R01",
+   "name": "page loads: title, favicon links, no console errors/failed requests",
+   "ok": true,
+   "detail": "{\"errors\":[],\"failed\":[]}"
+  },
+  {
+   "id": "R02",
+   "name": "sidebar: logo, New chat, My Nosh (external link), Help & Support, History, name + photo, no arrow beside name",
+   "ok": true,
+   "detail": "{\"logo\":true,\"newchat\":\"New chat\",\"mynosh\":[\"My Nosh\",\"https://www.letsnosh.io/\",\"_blank\"],\"help\":\"Help & Support\",\"hist\":\"History\",\"user\":\"Uzair Meran Khan\",\"avatar\":true,\"userArrow\":false,\"width\":214}"
+  },
+  {
+   "id": "R03",
+   "name": "header: \"Nosh Assistant\", Online, subtitle",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R04",
+   "name": "welcome message + 4 starter chips",
+   "ok": true,
+   "detail": "{\"text\":\"Hello! I'm Nosh.\\nYour kitchen companion for delicious, personalized meals. Ask me about recipes, upload a document to dig into, or just chat.\",\"chips\":[\"Find a quick recipe\",\"Match my ingredients\",\"Swap an ingr"
+  },
+  {
+   "id": "R05",
+   "name": "composer: placeholder, paperclip, send, multi-file accept list, count badge hidden",
+   "ok": true,
+   "detail": "{\"ph\":\"Ask Nosh anything about recipes, cooking, or your documents...\",\"attach\":true,\"send\":true,\"accept\":\".pdf,.docx,.txt,.md,.csv,.tsv,.xlsx,.json,.jsonl,.html,.htm,.rst,.log\",\"multiple\":true,\"cnt\":true}"
+  },
+  {
+   "id": "R06",
+   "name": "layout: no right panel, page does not scroll, chat scrolls internally, composer pinned inside viewport, 820px column",
+   "ok": true,
+   "detail": "{\"promo\":false,\"pageScroll\":false,\"hScroll\":false,\"formBottom\":750,\"ih\":768,\"logOverflow\":\"auto\",\"headerW\":820}"
+  },
+  {
+   "id": "R07a",
+   "name": "markdown renderer: table, code block, nested list, citations, [id] hidden",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R07b",
+   "name": "XSS: HTML typed by the user is shown as text, not executed",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R08",
+   "name": "chat: statistics question answered with a number, send re-enabled, no typing dots",
+   "ok": true,
+   "detail": "16,415 recipes contain both garlic and onion.\n\nIf you’d like to see a specific recipe or get a list of options, just let me know!"
+  },
+  {
+   "id": "R09",
+   "name": "recipe search: text first, then cards (image, title, steps/ingredients), then follow-up chips",
+   "ok": true,
+   "detail": "{\"order\":[\"bubble md\",\"cards\",\"note\"],\"n\":5,\"chips\":[\"Show me more\",\"Make it dairy-free\",\"Swap an ingredient\"]}"
+  },
+  {
+   "id": "R10",
+   "name": "no recipe ids and no \"full details\" control anywhere",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R10b",
+   "name": "card meta text is grammatical (no \"1 steps\")",
+   "ok": true,
+   "detail": "2 steps 9 ingredients | 3 steps 6 ingredients | 3 steps 5 ingredients | 3 steps 14 ingredients | 7 steps 16 ingredients"
+  },
+  {
+   "id": "R11",
+   "name": "chip \"Show me more\" appends more recipe cards",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R12",
+   "name": "card click opens recipe page: title, Ingredients, Method sections",
+   "ok": true,
+   "detail": "[\"Creamy Penne Pasta\",\"Ingredients\",\"Method\"]"
+  },
+  {
+   "id": "R13",
+   "name": "New chat: conversation cleared, welcome shown, first question saved to History",
+   "ok": true,
+   "detail": "{\"rows\":1,\"welcome\":true,\"hist\":[\"Find a penne pasta recipe.\",\"How many recipes contain both garlic and onion?\",\"<img src=x onerror=\\\"window.__xss=1\\\"> what is 2+2?\"]}"
+  },
+  {
+   "id": "R14",
+   "name": "History: expands, lists past chats, clicking one starts a new chat and replays it",
+   "ok": true,
+   "detail": "{\"open\":true,\"items\":[\"Find a penne pasta recipe.\",\"How many recipes contain both garlic and onion?\",\"<img src=x onerror=\\\"window.__xss=1\\\"> what is 2+2?\"]}"
+  },
+  {
+   "id": "R15",
+   "name": "Help & Support page: contact cards (phone/email/address), response time, 3 FAQ links, warranty, assistant examples; chat hidden; nav highlighted",
+   "ok": true,
+   "detail": "{\"tel\":2,\"mail\":2,\"faq\":3}"
+  },
+  {
+   "id": "R16",
+   "name": "Help example button returns to chat and runs that example",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R17",
+   "name": "Help \"Back to chat\" restores chat view and un-highlights nav",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R18",
+   "name": "New chat from the Help page returns to a fresh chat",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R19",
+   "name": "uploads: tiles with type badge/size/counts, paperclip count, placeholder names the files, chat confirms each file",
+   "ok": true,
+   "detail": "{\"chips\":[\"MD | policy.md | 226 B · 2 sections | ×\",\"CSV | sales.csv | 87 B · 4 rows | ×\"],\"ph\":\"Ask about your 2 documents...\",\"cnt\":\"2\",\"cntVisible\":true,\"log\":\"Hello! I'm Nosh.\\nYour kitchen companion for delicious, p"
+  },
+  {
+   "id": "R20",
+   "name": "unsupported upload (.bin) is rejected with a clear chat message and is not attached",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R21",
+   "name": "document Q&A through the UI: correct facts, citation badges, source chips",
+   "ok": false,
+   "detail": "{\"t\":\"Return window: Customers can return the machine within 30 days for a full refund1.\\nRestocking fee: A 10 % restocking fee applies to units that have been opened1.\",\"src\":[\"policy.md · Nosh Warranty > Returns\"],\"cit"
+  },
+  {
+   "id": "R22",
+   "name": "table question computed correctly (North = 270,000)",
+   "ok": false,
+   "detail": "Region with the highest total revenue: North【SQL】.\n\nBased on the summed revenues for all months, North’s total (120 000 + 150 000 = 270 000) exceeds S"
+  },
+  {
+   "id": "R23",
+   "name": "unanswerable document question: says it is not in the documents (no invention)",
+   "ok": true,
+   "detail": "The provided excerpts discuss warranty coverage and the return policy, but they contain no information about shipping costs to Mars.\n\nMissing information:\nshipping cost details for interplanetary dest"
+  },
+  {
+   "id": "R24",
+   "name": "removing an attachment (x) updates tiles, badge and placeholder",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R25",
+   "name": "attachments persist across a page reload",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R26",
+   "name": "drag & drop overlay appears on drag and disappears on leave",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R27",
+   "name": "long answer: first line visible, chat scrolls, page does not, composer stays visible, \"Latest\" button shown",
+   "ok": true,
+   "detail": "{\"answerTopVisible\":true,\"scrollable\":true,\"pageScroll\":false,\"jump\":true,\"tableOverflow\":false,\"bubbleOverflow\":false,\"hasTable\":true,\"hasCode\":true,\"formVisible\":true}"
+  },
+  {
+   "id": "R28",
+   "name": "long answer: table/code/bullets render without clipping or overflow",
+   "ok": true,
+   "detail": "{\"answerTopVisible\":true,\"scrollable\":true,\"pageScroll\":false,\"jump\":true,\"tableOverflow\":false,\"bubbleOverflow\":false,\"hasTable\":true,\"hasCode\":true,\"formVisible\":true}"
+  },
+  {
+   "id": "R29",
+   "name": "\"Latest\" button scrolls to the end of the answer",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R30",
+   "name": "viewport 1280x720: no page scroll/overflow, composer visible",
+   "ok": true,
+   "detail": "{\"h\":false,\"p\":false,\"f\":true}"
+  },
+  {
+   "id": "R30",
+   "name": "viewport 1366x768: no page scroll/overflow, composer visible",
+   "ok": true,
+   "detail": "{\"h\":false,\"p\":false,\"f\":true}"
+  },
+  {
+   "id": "R30",
+   "name": "viewport 1920x1080: no page scroll/overflow, composer visible",
+   "ok": true,
+   "detail": "{\"h\":false,\"p\":false,\"f\":true}"
+  },
+  {
+   "id": "R31",
+   "name": "all brand assets (logo, favicon, avatar, 8 dish photos) are served",
+   "ok": true,
+   "detail": "[200,200,200,200,200,200,200,200,200,200,200,200]"
+  },
+  {
+   "id": "R32",
+   "name": "?q= parameter auto-sends the message",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R33",
+   "name": "busy guard: a second message sent while one is generating is ignored (one user bubble)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "id": "R00",
+   "name": "no console errors / failed network requests during the whole run",
+   "ok": false,
+   "detail": "{\"errors\":[],\"failed\":[\"400 http://127.0.0.1:8000/api/upload\"]}"
+  }
+ ]
+}
